@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileHwProgram1-2", "MobileHwProgram1-2.csproj", "{0053DD53-4920-435D-B7D0-7DD00B994B25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0053DD53-4920-435D-B7D0-7DD00B994B25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0053DD53-4920-435D-B7D0-7DD00B994B25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0053DD53-4920-435D-B7D0-7DD00B994B25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0053DD53-4920-435D-B7D0-7DD00B994B25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
