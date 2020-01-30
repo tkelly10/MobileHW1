@@ -6,7 +6,8 @@ namespace MobileHwProgram1_2
         ComputerScience,
         Accounting,
         Marketing,
-        Nursing
+        Nursing,
+        Undeclared
 
     }
     

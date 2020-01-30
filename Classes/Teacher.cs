@@ -13,5 +13,10 @@ namespace MobileHwProgram1_2
 
             return output;
         }
+
+        public Teacher()
+        {
+
+        }
     }
 }

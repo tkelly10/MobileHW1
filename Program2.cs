@@ -12,7 +12,8 @@ namespace MobileHwProgram1_2
             string Name;
             int Age;
             int Id;
-            SchoolProgram Program;
+            SchoolProgram Program = SchoolProgram.Undeclared;
+            int counter = 1;
             string input;
 
             do
@@ -20,6 +21,57 @@ namespace MobileHwProgram1_2
                 Console.WriteLine("1) Student\n2) Teacher\n3) Exit");
                 input = Console.ReadLine();
 
+                Console.WriteLine("Name: ");
+                Name = Console.ReadLine();
+                Console.WriteLine("Age: ");
+                Age = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("ID: ");
+                Id = Convert.ToInt32(Console.ReadLine());
+
+                foreach(SchoolProgram sp in Enum.GetValues(typeof(SchoolProgram)))
+                {
+                    Console.WriteLine($"{counter}) {sp}");
+                    counter++;
+                }
+
+                int choice = Convert.ToInt32(Console.ReadLine());
+                foreach(SchoolProgram sp in Enum.GetValues(typeof(SchoolProgram)))
+                {
+                    if ((choice - 1) == (int)sp)
+                    {
+                        Program = sp;
+                        
+                    }
+
+                }
+
+                switch (input)
+                {
+                    case "1":
+                        {
+                            Student student = new Student();
+                            student.Name = Name;
+                            student.Age = Age;
+                            student.Id = Id;
+                            student.Program = Program;
+                            Console.WriteLine("Credits Earned: ");
+                            student.Credit = Convert.ToInt32(Console.ReadLine());
+                            People.Add(student);
+                            break;
+                        }
+                    case "2":
+                        {
+                            Teacher teacher = new Teacher();
+                            teacher.Name = Name;
+                            teacher.Age = Age;
+                            teacher.Id = Id;
+                            teacher.Program = Program;
+                            Console.WriteLine("Years of Service");
+                            teacher.Tenure = Convert.ToInt32(Console.ReadLine());
+                            People.Add(teacher);
+                            break;
+                        }
+                }
             } while (input != "3");
 
 
