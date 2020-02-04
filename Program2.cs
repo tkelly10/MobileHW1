@@ -40,20 +40,20 @@ namespace MobileHwProgram1_2
                     if ((choice - 1) == (int)sp)
                     {
                         Program = sp;
-                        
                     }
-
                 }
 
                 switch (input)
                 {
                     case "1":
                         {
-                            Student student = new Student();
-                            student.Name = Name;
-                            student.Age = Age;
-                            student.Id = Id;
-                            student.Program = Program;
+                            Student student = new Student
+                            {
+                                Name = Name,
+                                Age = Age,
+                                Id = Id,
+                                Program = Program
+                            };
                             Console.WriteLine("Credits Earned: ");
                             student.Credit = Convert.ToInt32(Console.ReadLine());
                             People.Add(student);
@@ -61,11 +61,13 @@ namespace MobileHwProgram1_2
                         }
                     case "2":
                         {
-                            Teacher teacher = new Teacher();
-                            teacher.Name = Name;
-                            teacher.Age = Age;
-                            teacher.Id = Id;
-                            teacher.Program = Program;
+                            Teacher teacher = new Teacher
+                            {
+                                Name = Name,
+                                Age = Age,
+                                Id = Id,
+                                Program = Program
+                            };
                             Console.WriteLine("Years of Service");
                             teacher.Tenure = Convert.ToInt32(Console.ReadLine());
                             People.Add(teacher);
@@ -74,7 +76,10 @@ namespace MobileHwProgram1_2
                 }
             } while (input != "3");
 
-
+            foreach(Person p in People)
+            {
+                Console.WriteLine(p.Display());
+            }
         }
 
 
