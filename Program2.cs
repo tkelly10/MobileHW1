@@ -19,11 +19,12 @@ namespace MobileHwProgram1_2
 
             do
             {
-                stillGoing = true;
+                
                 Console.WriteLine("1) Student\n2) Teacher\n3) Exit");
                 input = Console.ReadLine();
                 if(input != "3")
                 {
+                    stillGoing = true;
                     Console.WriteLine("Name: ");
                     Name = Console.ReadLine();
                     Console.WriteLine("Age: ");
