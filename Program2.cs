@@ -15,12 +15,13 @@ namespace MobileHwProgram1_2
             SchoolProgram Program = SchoolProgram.Undeclared;
             int counter = 1;
             string input;
+            bool stillGoing;
 
             do
             {
                 Console.WriteLine("1) Student\n2) Teacher\n3) Exit");
                 input = Console.ReadLine();
-
+                stillGoing = true;
                 Console.WriteLine("Name: ");
                 Name = Console.ReadLine();
                 Console.WriteLine("Age: ");
@@ -33,7 +34,7 @@ namespace MobileHwProgram1_2
                     Console.WriteLine($"{counter}) {sp}");
                     counter++;
                 }
-
+                counter = 1;
                 int choice = Convert.ToInt32(Console.ReadLine());
                 foreach(SchoolProgram sp in Enum.GetValues(typeof(SchoolProgram)))
                 {
@@ -42,7 +43,7 @@ namespace MobileHwProgram1_2
                         Program = sp;
                     }
                 }
-
+                
                 switch (input)
                 {
                     case "1":
@@ -73,8 +74,9 @@ namespace MobileHwProgram1_2
                             People.Add(teacher);
                             break;
                         }
+                    case "3": { stillGoing = false; break; }
                 }
-            } while (input != "3");
+            } while (stillGoing);
 
             foreach(Person p in People)
             {
