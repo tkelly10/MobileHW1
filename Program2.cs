@@ -77,9 +77,10 @@ namespace MobileHwProgram1_2
                                 People.Add(teacher);
                                 break;
                             }
-                        case "3": { stillGoing = false; break; }
+                        
                     }
                 }
+                else { stillGoing = false; }
                 
             } while (stillGoing);
 
